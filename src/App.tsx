@@ -1,26 +1,13 @@
-import { useState } from 'react'
 import './App.css'
 import Waves from './blocks/Backgrounds/Waves/Waves.tsx'
 import ProfileCard from './blocks/Components/ProfileCard/ProfileCard.tsx'
-import { VscHome, VscArchive, VscAccount, VscSettingsGear } from 'react-icons/vsc';
-import Dock from './blocks/Components/Dock/Dock.tsx';
-import ContactPopup from './blocks/Components/ContactPopup/ContactPopup.tsx'
-
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
-
+// import { VscArchive, VscAccount, } from 'react-icons/vsc';
 
 function App() {
-  const items = [
-    { icon: <VscAccount size={18} />, label: 'Profile', onClick: () => alert('Profile!') },
-    { icon: <VscArchive size={18} />, label: 'Archive', onClick: () => alert('Archive!') },
-  ];
+  // const items = [
+  //   { icon: <VscAccount size={18} />, label: 'Profile', onClick: () => alert('Profile!') },
+  //   { icon: <VscArchive size={18} />, label: 'Archive', onClick: () => alert('Archive!') },
+  // ];
 
   return (
     <>

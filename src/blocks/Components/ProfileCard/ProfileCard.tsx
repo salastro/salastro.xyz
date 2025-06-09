@@ -18,8 +18,6 @@ import {
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 
-import { motion } from 'framer-motion';
-
 interface ProfileCardProps {
   avatarUrl: string;
   iconUrl?: string;
