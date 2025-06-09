@@ -308,6 +308,17 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
             <div className="pc-shine" />
             <div className="pc-glare" />
             <div className="pc-contact-content">
+              {
+                <button
+                  className="pc-flip-btn"
+                  onClick={handleFlip}
+                  style={{ pointerEvents: "auto" }}
+                  type="button"
+                  aria-label={`Flip card to ${isFlipped ? "front" : "back"}`}
+                >
+                  <FontAwesomeIcon icon={faRotateLeft} className="text-white" />
+                </button>
+              }
               <h3>Contact Me</h3>
               <div className="pc-contact-list">
                 {contactItems.map((item, index) => (
@@ -322,11 +333,11 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
                     </button>
                   </div>
                 ))}
-                <div className="pc-contact-list">
+                <div className="pc-info-list">
                   {infoItems.map((item, index) => (
                     <div key={index} className="pc-contact-item">
                       <FontAwesomeIcon icon={item.icon} />
-                        <span>{item.value}</span>
+                      <span>{item.value}</span>
                     </div>
                   ))}
                 </div>
@@ -376,7 +387,8 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
             </div>
           </div>
         </section>
-      </div></div>
+      </div>
+    </div>
   );
 };
 
