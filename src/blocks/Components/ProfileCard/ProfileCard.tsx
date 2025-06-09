@@ -10,11 +10,14 @@ import {
   faEnvelope,
   faPhone,
   faMapMarkerAlt,
+  faBuildingColumns,
+  faRotateLeft,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faGithub,
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
+
 import { motion } from 'framer-motion';
 
 interface ProfileCardProps {
@@ -105,8 +108,11 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
     { icon: faPhone, label: 'Phone', value: phone, href: `tel:${phone}` },
     { icon: faGithub, label: 'GitHub', value: github, href: `https://github.com/${github}` },
     { icon: faLinkedin, label: 'LinkedIn', value: linkedin, href: `https://linkedin.com/in/${linkedin}` },
-    { icon: faMapMarkerAlt, label: 'Address', value: address, href: null },
   ];
+  const infoItems = [
+    { icon: faBuildingColumns, label: 'Univeristy', value: "Zewail City" },
+    { icon: faMapMarkerAlt, label: 'Address', value: address },
+  ]
 
   const animationHandlers = useMemo(() => {
     if (!enableTilt) return null;
@@ -305,22 +311,25 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
               <h3>Contact Me</h3>
               <div className="pc-contact-list">
                 {contactItems.map((item, index) => (
-                  <div key={index} className="pc-contact-item">
-                    {!item.href && <FontAwesomeIcon icon={item.icon} />}
-                    {item.href ? (
-                      <button
-                        onClick={() => window.open(item.href, "_blank", "noopener,noreferrer")}
-                        style={{ pointerEvents: "auto" }}
-                        type="button"
-                        className="pc-contact-btn"
-                      >
-                        <FontAwesomeIcon icon={item.icon} size="2x" />
-                      </button>
-                    ) : (
-                        <span>{item.value}</span>
-                      )}
+                  <div key={index} className={`pc-contact-item ${index % 2 !== 0 ? "odd" : "even"}`}>
+                    <button
+                      onClick={() => window.open(item.href, "_blank", "noopener,noreferrer")}
+                      style={{ pointerEvents: "auto" }}
+                      type="button"
+                      className="pc-contact-btn"
+                    >
+                      <FontAwesomeIcon icon={item.icon} className="pc-contact-icon" />
+                    </button>
                   </div>
                 ))}
+                <div className="pc-contact-list">
+                  {infoItems.map((item, index) => (
+                    <div key={index} className="pc-contact-item">
+                      <FontAwesomeIcon icon={item.icon} />
+                        <span>{item.value}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

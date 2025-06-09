@@ -490,10 +490,18 @@
   list-style: none;
   padding: 0;
   margin: 1rem 0 0;
+  margin-top: 2em;
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+  font-size: 22px;
+}
+
+.pc-contact-icon {
+  width:  4em;
+  height: 4em;
 }
 
 .pc-contact-item {
@@ -504,6 +512,14 @@
   border-radius: 8px;
   transition: background-color 0.2s ease;
   color: rgba(255, 255, 255, 0.9);
+}
+
+.pc-contact-item.odd {
+  margin-right: 1em;
+}
+
+.pc-contact-item.even {
+  margin-left: 1em;
 }
 
 @keyframes glow-bg {
@@ -623,6 +639,10 @@
   .pc-contact-content p {
     font-size: 12px;
     top: -8px;
+  }
+
+  .pc-contact-list {
+    margin-top: 1em;
   }
 
   .pc-user-info {
