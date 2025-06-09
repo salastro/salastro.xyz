@@ -1,6 +1,9 @@
 /*
 	Installed from https://reactbits.dev/ts/default/
 */
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 :root {
   --pointer-x: 50%;
   --pointer-y: 50%;
@@ -29,6 +32,7 @@
   --sunpillar-clr-5: var(--sunpillar-5);
   --sunpillar-clr-6: var(--sunpillar-6);
   --card-radius: 30px;
+  --font-main: "Urbanist", sans-serif;
 }
 
 .pc-card-container {
@@ -365,6 +369,7 @@
 }
 
 .pc-handle {
+  font-family: "Urbanist", sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.9);
@@ -499,8 +504,21 @@
   font-size: 22px;
 }
 
+.pc-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
+
 .pc-contact-icon {
-  width:  4em;
+  width: 4em;
   height: 4em;
 }
 
@@ -520,6 +538,20 @@
 
 .pc-contact-item.even {
   margin-left: 1em;
+}
+
+.pc-flip-btn {
+  position: absolute;
+  bottom: 70px;
+  right: 10px;
+  z-index: 6;
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 @keyframes glow-bg {
