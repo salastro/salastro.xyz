@@ -1,6 +1,7 @@
 import './App.css'
 import Waves from './blocks/Backgrounds/Waves/Waves.tsx'
 import ProfileCard from './blocks/Components/ProfileCard/ProfileCard.tsx'
+import grain from './assets/jeb.svg'
 // import { VscArchive, VscAccount, } from 'react-icons/vsc';
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
         handle="salastro"
         status="Stil alive"
         avatarUrl="salah.png"
-        grainUrl="jeb.svg"
+        grainUrl={grain}
         innerGradient="radial-gradient(circle at center, #ffffff00, #00000000)"
         showBehindGradient={false}
         showUserInfo={true}
