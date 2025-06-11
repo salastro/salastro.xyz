@@ -333,7 +333,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
                 ))}
                 <div className="pc-info-list">
                   {infoItems.map((item, index) => (
-                    <div key={index} className="pc-contact-item">
+                    <div key={index} className="pc-info-item">
                       <FontAwesomeIcon icon={item.icon} />
                       <span>{item.value}</span>
                     </div>
